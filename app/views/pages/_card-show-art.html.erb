@@ -2,7 +2,7 @@
   <div class="row mb-4">
      <div class="col-md-12 d-flex">
       <div class="card-trip image col-md-4 m-md-4">
-         <img src= "https://upload.wikimedia.org/wikipedia/commons/f/f6/The_Joconde_by_a_student_of_Leonardo_da_Vinci.png" />
+         <%= cl_image_tag @art.photo.key, width: 400, height: 300 %>
         </div>
         <div class="card-trip fit-content col-md-6">
   <div class="card-trip-infos ">

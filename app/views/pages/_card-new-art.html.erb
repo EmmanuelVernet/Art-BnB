@@ -7,7 +7,8 @@
             <div class="col-md-4 d-flex"> <!-- Each card occupies 1/3 of the row -->
               <div class="card p-3 " style="width: 100%; margin: 10px;"> <!-- Padding and margin -->
                 <div class="card-header ">
-                   <img src= "https://upload.wikimedia.org/wikipedia/commons/f/f6/The_Joconde_by_a_student_of_Leonardo_da_Vinci.png" />
+                   <%= cl_image_tag art.photo.key, width: 400, height: 300, crop: :fill, class: "card-header" %>
+
   <%= link_to art.title, art_path(art), class: "text-black" %>
 </div>
                 <div class="card-body">
