@@ -1,0 +1,14 @@
+<h1>Index art page</h1>
+
+<% @arts.each do |art| %>
+  <div class="mb-3">
+  <p>Artist name: <%= art.name %></p>
+  <p>Title: <%= art.title %></p>
+  <p>Category: <%= art.category %></p>
+  <p>Creation date: <%= art.creation_date %></p>
+  <p>Renting price per day: <%= art.price %></p>
+  <%= link_to "See art details", art_path(art) %>
+  </div>
+<% end %>
+
+<%= link_to "All arts", arts_path, class: "btn btn-primary text-white" %>
