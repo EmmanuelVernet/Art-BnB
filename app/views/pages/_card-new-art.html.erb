@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <% if @arts.any? %>
+      <% @arts.each_slice(3) do |art_group| %> <!-- Grouping cards into rows of 3 -->
+        <div class="row mb-4"> <!-- Row for each group of 3 -->
+          <% art_group.each do |art| %>
+            <div class="col-md-4 d-flex"> <!-- Each card occupies 1/3 of the row -->
+              <div class="card p-3 " style="width: 100%; margin: 10px;"> <!-- Padding and margin -->
+                <div class="card-header ">
+                   <img src= "https://upload.wikimedia.org/wikipedia/commons/f/f6/The_Joconde_by_a_student_of_Leonardo_da_Vinci.png" />
+  <%= link_to art.title, art_path(art), class: "text-black" %>
+</div>
+                <div class="card-body">
+                  <p class="card-text">Artist name: <%= art.name %></p>
+                  <p class="card-text">Category: <%= art.category %></p>
+                  <p class="card-text">Creation date: <%= art.creation_date %></p>
+                  <p class="card-text">Renting price per day: <%= number_to_currency(art.price) %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% else %>
+      <p class="text-center">No artworks available at the moment.</p>
+    <% end %>
+  </div>
+  <div class="text-center mt-4">
+  </div>
+</div>

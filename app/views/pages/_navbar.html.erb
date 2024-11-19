@@ -3,14 +3,14 @@
     <%# <a class="navbar-brand" href="#"> %>
       <%= image_tag "logo.png", class: "logo-navbar", style: "height: 40px; border-radius: 4px;" %>
       <%# <img src="../../app/assets/images/logo.png" alt="Logo" style="height: 40px;" /> %>
-</a>
 
-    <h1><span>ART BNB  </span><h3>Book and brag</h3></h1>
+
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <%= link_to "Home", arts_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Dashboard</a>

@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row mb-4">
+     <div class="col-md-12 d-flex">
+      <div class="card-trip image col-md-4 m-md-4">
+         <img src= "https://upload.wikimedia.org/wikipedia/commons/f/f6/The_Joconde_by_a_student_of_Leonardo_da_Vinci.png" />
+        </div>
+        <div class="card-trip fit-content col-md-6">
+  <div class="card-trip-infos ">
+    <div>
+      <h2> <%= @art.title %></p></h2>
+      <p class="card-text">Artist name: <%= @art.name %></p>
+      <p class="card-text">Category: <%= @art.category %></p>
+      <p class="card-text">Creation date: <%= @art.creation_date %></p>
+      <p class="card-text">Renting price per day: <%= number_to_currency(@art.price) %></p>
+      </div>
+    <h2 class="card-trip-pricing">£99.99</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+</div>
+
+     </div>
+     </div>
+
+
+
+
+<%# button CTA booking => booking
+  invisible form activated with button (JS)
+  form (render) %>
+
+<%# confirmation card (render)
+  form and button disappear %>
