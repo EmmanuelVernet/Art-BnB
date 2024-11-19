@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
-  before_action :set_art, except: [:destroy]
-  defore_action :set_booking
+  before_action :set_art #, except: [:destroy]
+  before_action :set_booking, only: [:show, :edit, :update] # find by ID only on these actions
   def index
-    @bookings = @art.booking
+    @bookings = @art.bookings
   end
 
   def show
