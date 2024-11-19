@@ -10,7 +10,7 @@
       <h2> <%= @art.title %></p></h2>
       <p class="card-text">Artist name: <%= @art.name %></p>
       <p class="card-text">Category: <%= @art.category %></p>
-      <p class="card-text">Creation date: <%= @art.creation_date %></p>
+      <p class="card-text">Creation date: <%= @art.creation_date.strftime('%d/%m/%Y') %></p>
       <p class="card-text">Renting price per day: <%= number_to_currency(@art.price) %></p>
       </div>
     <h2 class="card-trip-pricing">£99.99</h2>
