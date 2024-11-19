@@ -4,7 +4,7 @@
     <h2>Artist name: <%= @art.name %></h2>
     <h3>Title: <%= @art.title %></h3>
     <p>Category: <%= @art.category %></p>
-    <p>Creation date: <%= @art.creation_date %></p>
+    <p>Creation date: <%= @art.creation_date.strftime('%d/%m/%Y') %></p>
     <p>Renting price per day: <%= @art.price %></p>
     <%= link_to "Edit art", edit_art_path, class: "btn btn-primary text-white" %>
     <%= link_to "All arts", arts_path, class: "btn btn-primary text-white" %>
