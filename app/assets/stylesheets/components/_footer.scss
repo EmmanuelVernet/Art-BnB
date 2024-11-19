@@ -1,0 +1,116 @@
+// .footer {
+//   background: #232323;
+//   height: 116px;
+// }
+
+// .footer-top {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   align-content: space-between;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   align-items: center;
+//   justify-content: space-between;
+//   color: rgba(104, 104, 104, 0.94);
+//   padding: 0px 30px;
+// }
+
+// .footer-bottom {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   color: rgba(104, 104, 104, 0.94);
+//   padding: 0px 30px;
+//   border-top: rgba(104, 104, 104, 0.94);
+// }
+
+// .footer-links {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .footer-links a {
+//   color: rgba(104, 104, 104, 0.94);
+//   opacity: 0.30;
+//   text-decoration: none;
+//   font-size: 24px;
+//   padding: 0px 10px;
+// }
+
+// .footer-links a:hover {
+//   opacity: 1;
+// }
+
+// .logo-footer {
+//   height: 30px;
+//   border-radius: 4px;
+// }
+
+// .horizontal-line {
+//   width: 100%; /* La ligne prend toute la largeur de l'espace disponible */
+//   border-top: 2px solid rgba(104, 104, 104, 0.94); /* La couleur et l'épaisseur de la ligne */
+//   // margin: 0 20px;
+// }
+
+
+.footer {
+  height: 136px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #232323;
+  color: rgba(104, 104, 104, 0.94);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.logo img {
+  margin-left: 15px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.address p {
+  margin-left: 25px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: rgba(104, 104, 104, 0.94);
+}
+
+.horizontal-line {
+  border-top: 1px solid rgba(104, 104, 104, 0.94);
+  margin: 10px 15px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright p {
+  margin-left: 15px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: rgba(104, 104, 104, 0.94);
+}
+
+.footer-links a {
+  margin-right: 15px;
+  color: rgba(104, 104, 104, 0.94);
+  opacity: 0.30;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+  }
+
+.footer-links a:hover {
+  opacity: 1;
+}

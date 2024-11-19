@@ -1,7 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Assure-toi que la navbar reste au-dessus des autres éléments */
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
