@@ -16,7 +16,12 @@ body {
   }
 }
 
-/* Card Styling */
+img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .card {
   background-color: #fff; /* White background inside the frame */
   border: 8px solid #622d08e6; /* Thick wooden frame border */

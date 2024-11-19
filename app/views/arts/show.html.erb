@@ -1,12 +1,1 @@
-<div class="container">
-  <div class="col-sm-8 offset-sm-2">
-    <h1>Show art page</h1>
-    <h2>Artist name: <%= @art.name %></h2>
-    <h3>Title: <%= @art.title %></h3>
-    <p>Category: <%= @art.category %></p>
-    <p>Creation date: <%= @art.creation_date %></p>
-    <p>Renting price per day: <%= @art.price %></p>
-    <%= link_to "Edit art", edit_art_path, class: "btn btn-primary text-white" %>
-    <%= link_to "All arts", arts_path, class: "btn btn-primary text-white" %>
-  </div>
-</div>
+<%= render "pages/card-show-art" %>
