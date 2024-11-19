@@ -1,0 +1,9 @@
+<h1>Index art page</h1>
+
+<% @arts.each do |art| %>
+  <p>Artist name: <%= art.name %></p>
+  <p>Title: <%= art.title %></p>
+  <p>Category: <%= art.category %></p>
+  <p>Creation date: <%= art.creation_date %></p>
+  <p>Renting price per day: <%= art.price %></p>
+<% end %>
