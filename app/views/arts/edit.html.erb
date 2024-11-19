@@ -1,1 +1,10 @@
 <h1>Edit art page</h1>
+<%= simple_form_for(@art) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :name %>
+  <%= f.input :category %>
+  <%= f.input :creation_date %>
+  <%= f.input :price %>
+  
+  <%= f.submit class: "btn btn-primary text-white"%>
+<% end %>

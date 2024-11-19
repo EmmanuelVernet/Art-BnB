@@ -17,6 +17,10 @@ class ArtsController < ApplicationController
     redirect_to art_path(@art)
   end
 
+  def edit
+    @art = Art.find(params[:id])
+  end
+
   def update
     @art = Art.find(params[:id])
     @art.update(art_params)
