@@ -1,15 +1,24 @@
 <%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://img2.freepng.fr/20180218/iow/av13n8aa8.webp');"> %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dp6dnotnb/image/upload/slprzvimeflulzjj1mgc.jpg');">
-  <div class="container">
-    <h1 id="banner-title">Art'BnB</h1>
-    <h5 id="banner-tagline">Book'n'Brag</h5>
-    <p>Book your favorite masterpiece for a night</p>
-    <p>Impress your guests</p>
-  </div>
+<%= render "homepage-banner" %>
+
+<div class="container">
+
+<h2 class="paragraph-title">Top trending arts</h2>
+
+<p>All types of art pieces are available for rent on Art'BnB.</p>
+<p>Pick the one you love to pimp your living-room!</p>
+
+
+<p>
+# Super images ici.
+</p>
+
+
+<%= link_to "See arts for rent", arts_path, class: "btn btn-ghost" %>
+
+
+
+<%= link_to "Register a new art", new_art_path, class: "btn btn-ghost" %>
+
+
 </div>
-# Navbar (including sign up and log in) # to code in application layout
-# Big banner
-# Listing of insolite / most wanted arts => redirect to show art
-# Button to see all listings => redirect to index
-# Button to create offer => redirect to new offer
-# Footer

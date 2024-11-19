@@ -1,10 +1,21 @@
+.no-container {
+  width: 100%;  /* Prendre toute la largeur de l'écran */
+  padding: 0;   /* Pas de padding */
+  max-width: none;  /* Annuler la largeur max */
+}
+
+.no-container .container {
+  width: 100% !important;  /* S'assurer que .container occupe toute la largeur */
+  padding: 0 !important;   /* Supprimer tout padding éventuel */
+  max-width: none !important;  /* Désactiver la largeur max */
+}
+
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
   opacity: 0.9;
 }
-
 .banner h1 {
   margin: 0;
   color: white;
