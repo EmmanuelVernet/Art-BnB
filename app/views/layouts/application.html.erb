@@ -18,11 +18,18 @@
 
   <body>
      <%= render "/pages/navbar" %>
+     <div class="container-layout">
 
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <div class="content-layout">
+        <%= yield %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+
+      <div class="footer-layout">
+        <%= render "/pages/footer" %>
+      </div>
+
      </div>
-     <%= render "/pages/footer" %>
   </body>
 </html>

@@ -10,7 +10,7 @@
 
 
 <%# Carousel Bootstrap %>
-
+<div class="container-carousel">
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active carousel-picture">
@@ -32,28 +32,30 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+</div>
 
 <div class="container-cards-homepage">
 <div class="section">
-    <h2 class="paragraph-title">Bring a masterpiece home</h2>
+    <h2 class="paragraph-title-column">Bring a masterpiece home</h2>
 
-    <p class="paragraph">All types of art pieces are available for rent on Art'BnB.
+    <p class="paragraph-column">All types of art pieces are available for rent on Art'BnB.
     </br>Pick the one you love to pimp your living-room!</p>
 
     <div class="card-product">
     <%= image_tag "salon-homepage.jpg" %>
       <div class="card-product-infos">
         <h2>Have guests tonight?</h2>
-        <p>Don't waste more time. <strong>Book'n'brag</strong>!</p>
+        <p>Don't waste more time.
+        <strong>Book'n'brag</strong>!</p>
         <%= link_to "See arts for rent", arts_path, class: "btn btn-ghost" %>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="paragraph-title">Make money from your art</h2>
+    <h2 class="paragraph-title-column">Make money from your art</h2>
 
-    <p class="paragraph">All types of art pieces are available for rent on Art'BnB.
+    <p class="paragraph-column">All types of art pieces are available for rent on Art'BnB.
     </br>Pick the one you love to pimp your living-room!</p>
 
     <div class="card-product">
@@ -63,7 +65,7 @@
 
         <h2>Own a masterpiece?</h2>
         <div>
-        <p>Don't waste more time. <strong>Earn money from it</strong>!</p>
+        <p>Don't waste more time.<strong>Earn money from it</strong>!</p>
         </div>
 
         <%= link_to "Register a new art", new_art_path, class: "btn btn-ghost"%>

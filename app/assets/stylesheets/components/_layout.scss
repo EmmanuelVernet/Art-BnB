@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
+}
+
+/* The container takes the full height of the page */
+.container-layout {
+  min-height: 100%; /* Ensure the container fills the entire height */
+}
+
+/* The content takes the remaining space */
+.content-layout {
+  flex: 1; /* Makes content fill the available space */
+}
+
+/* Styling for the footer */
+.footer-layout {
+  width: 100%; /* Ensure footer spans the entire width of the page */
+}

@@ -1,2 +1,29 @@
-<h1>New Art view</h1>
-<%# <%= render "pages/form-new-art" %>
+
+
+<div class="container">
+
+
+<h1 class="paragraph-title">Register a new piece of art</h1>
+
+<p class="paragraph">You are the lucky owner of a masterpiece?
+</br>You could make money from it, thanks to Art'BnB.</p>
+
+
+  <div class="row justify-content-center">
+    <div class="col-5 mb-3 border border-1 p-5 bg-light shadow">
+      <h2 class="text-center">New Art</h2>
+      <br>
+      <%= simple_form_for [@art] do |f| %>
+        <%= f.input :name, label: 'Artist name' %>
+        <%= f.input :title, label: 'Art piece name' %>
+        <%= f.input :category, hint: 'Abstract, modern...' %>
+        <%= f.input :creation_date, label: 'Art creation date' %>
+        <%= f.input :price, as: :integer, label: 'Renting price per day' %>
+        <%= f.button :submit, class: "btn btn-primary w-100" %>
+      <% end %>
+    </div>
+    <div class="text-center">
+        <%= link_to "All movies list", arts_path %>
+    </div>
+  </div>
+</div>
