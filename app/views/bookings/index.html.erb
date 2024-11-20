@@ -1,12 +1,2 @@
-<div class="container">
-  <h1>Index for bookings</h1>
-  <% @bookings.each do |booking| %>
-    <p>Art piece: <%= booking.art.title %></p>
-    <p>Booking start date: <%= booking.start_date.strftime('%d/%m/%Y') %></p>
-    <p>Booking end date: <%= booking.end_date.strftime('%d/%m/%Y') %></p>
-    <p>Booking price per day: <%= number_to_currency(booking.art.price) %></p>
-    <p>Total price: <%= number_to_currency((booking.end_date - booking.start_date).round*(booking.art.price)) %></p>
-    <p><%= link_to "See art details", art_path(booking.art_id) %></p>
-    <p><%= link_to "See booking details", art_booking_path(booking.art_id, booking) %></p>
-  <% end %>
-</div>
+
+<%= render "pages/card-index-booking" %>
