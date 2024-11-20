@@ -1,23 +1,28 @@
-<h1>Book <%=  "@art.title" %></h1>
 
-form (simple_form): #invisible form activated with button (JS)
+<h1>Book <%= @art.title %></h1>
+
+<%# form (simple_form): #invisible form activated with button (JS)
   calendar with:
     input start_date
     input end_date
   validations (must have input dates, must be logged in)
-  send button => validation modals
+  send button => validation modals %>
 
-<%= simple_form_for([@art, @booking]) do |f| %>
-  <div class=".datepicker()">
-  <%= f.input :start_date,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
-  <%= f.input :end_date,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+      <%= simple_form_for([@art, @booking]) do |f| %>
+        <div class=".datepicker()">
+        <%= f.input :start_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+        <%= f.input :end_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
 
 
-  </div>
-  <%= f.submit %>
+        </div>
+          <%# <div class ="btn btn-primary w-100"> %>
+            <%= f.submit "Book", class: "btn btn-primary w-100" %>
+          <%# </div> %>
 
-<% end %>
+
+      <% end %>
+
