@@ -2,7 +2,9 @@
   <div class="row mb-4">
      <div class="col-md-12 d-flex">
       <div class="card-trip image col-md-4 m-md-4">
+        <% if @art.photo.key %>
          <%= cl_image_tag @art.photo.key, width: 400, height: 300 %>
+         <% end %>
         </div>
         <div class="card-trip fit-content col-md-6">
   <div class="card-trip-infos ">
