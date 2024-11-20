@@ -1,6 +1,7 @@
 <div class="container">
 
-<h1>Edit art page</h1>
+<h1 class="paragraph-title">Edit <%= @art.title %></h1>
+
 <%= simple_form_for(@art) do |f| %>
   <%= f.input :title %>
   <%= f.input :name %>
