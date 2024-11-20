@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :set_art #, except: [:destroy]
+  before_action :authenticate_user!
+  before_action :set_art
   before_action :set_booking, only: [:show, :edit, :update] # find by ID only on these actions
   def index
     @bookings = @art.bookings
@@ -16,8 +17,9 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.art = @art
+    @booking.user = current_user
     @booking.save
-    redirect_to art_path(@art)
+    redirect_to art_booking_path(@booking.art_id, @booking)
   end
 
   def edit
@@ -44,4 +46,3 @@ class BookingsController < ApplicationController
     @art = Art.find(params[:art_id])
   end
 end
-

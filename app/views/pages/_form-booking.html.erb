@@ -7,12 +7,15 @@ form (simple_form): #invisible form activated with button (JS)
   validations (must have input dates, must be logged in)
   send button => validation modals
 
-<%= simple_form_for(@art) do |f| %>
-  <%= f.input :name, placeholder: "Enter your name" %>
+<%= simple_form_for([@art, @booking]) do |f| %>
   <div class=".datepicker()">
-  <%= f.input :opening_date,
+  <%= f.input :start_date,
             as: :string,
             input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :end_date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+
 
   </div>
   <%= f.submit %>
