@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <%= link_to "Home", "", class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
             <%= link_to "Arts List", arts_path, class: "nav-link" %>
@@ -19,7 +19,8 @@
             <a class="nav-link" href="#">Dashboard</a>
           </li>
           <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+            <%= image_tag "profile-picture.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown", bs_haspopup: true, bs_expanded: false }, alt: "Profile picture" %>
+
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign up</a>
               <a class="dropdown-item" href="<%= new_user_session_path %>">Log in</a>
