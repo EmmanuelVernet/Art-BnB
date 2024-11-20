@@ -33,37 +33,45 @@
   </button>
 </div>
 
-<div class="container">
-<h2 class="paragraph-title">Book a masterpiece for your place</h2>
+<div class="container-cards-homepage">
+<div class="section">
+    <h2 class="paragraph-title">Bring a masterpiece home</h2>
 
-<p class="paragraph">All types of art pieces are available for rent on Art'BnB.
-</br>Pick the one you love to pimp your living-room!</p>
+    <p class="paragraph">All types of art pieces are available for rent on Art'BnB.
+    </br>Pick the one you love to pimp your living-room!</p>
 
-<div class="card-product">
-  <img src="" />
-  <div class="card-product-infos">
-    <h2>Have guests tonight?</h2>
-    <p>Don't waste more time. <strong>Book'n'brag</strong>!</p>
-    <%= link_to "See arts for rent", arts_path, class: "btn btn-ghost" %>
+    <div class="card-product">
+    <%= image_tag "salon-homepage.jpg" %>
+      <div class="card-product-infos">
+        <h2>Have guests tonight?</h2>
+        <p>Don't waste more time. <strong>Book'n'brag</strong>!</p>
+        <%= link_to "See arts for rent", arts_path, class: "btn btn-ghost" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="paragraph-title">Make money from your art</h2>
+
+    <p class="paragraph">All types of art pieces are available for rent on Art'BnB.
+    </br>Pick the one you love to pimp your living-room!</p>
+
+    <div class="card-product">
+      <%# <img src="../../assets/images/logo.png" /> %>
+    <%= image_tag "money-homepage.jpg" %>
+      <div class="card-product-infos">
+
+        <h2>Own a masterpiece?</h2>
+        <div>
+        <p>Don't waste more time. <strong>Earn money from it</strong>!</p>
+        </div>
+
+        <%= link_to "Register a new art", new_art_path, class: "btn btn-ghost"%>
+      </div>
+    </div>
   </div>
 </div>
-</div>
 
-<div class="container">
-<h2 class="paragraph-title">Make money from your art!</h2>
-
-<p class="paragraph">All types of art pieces are available for rent on Art'BnB.
-</br>Pick the one you love to pimp your living-room!</p>
-
-<div class="card-product">
-  <img src="../../assets/images/logo.png" />
-  <div class="card-product-infos">
-    <h2>Own a masterpiece?</h2>
-    <p>Don't waste more time. <strong>Earn money from it</strong>!</p>
-    <%= link_to "Register a new art", new_art_path, class: "btn btn-ghost" %>
-  </div>
-</div>
-</div>
 
 <%# Buttons %>
 
