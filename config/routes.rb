@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :arts do
     resources :bookings
   end
+  
 end
