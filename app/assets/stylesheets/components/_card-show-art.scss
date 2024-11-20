@@ -30,6 +30,12 @@
   align-items: flex-end;
   position: relative;
   line-height: 42px;
+
+}
+
+.card-trip-infos {
+  border: 2px, solid, black;
+  border-radius: 4px;
 }
 
 .card-trip-infos .card-trip-user {
@@ -37,6 +43,7 @@
   right: 16px;
   top: -20px;
   width: 40px;
+
 }
 
 .fit-content{
