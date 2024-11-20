@@ -10,33 +10,34 @@
   width: 48%; /* Ou une autre largeur selon ton besoin */
 }
 
-.card-product {
+.card-product-homepage {
   overflow: hidden;
-  height: 240px;
+  height: 310px;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
 }
 
-.card-product img {
+.card-product-homepage img {
   height: 100%;
   width: 300px;
   object-fit: cover;
 }
 
-.card-product h2 {
-  font-size: 16px;
+.card-product-homepage h2 {
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   color: rgb(57, 57, 57);
+  text-align: center;
 }
 
-.card-product p {
-  font-size: 16px;
+.card-product-homepage p {
+  font-size: 20px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 40px;
@@ -45,13 +46,11 @@
   font-optical-sizing: auto;
   font-style: normal;
   padding: 10px;
-  margin-left: 26px;
+  margin: 26px;
   text-align: center;
 }
 
-
-
-.card-product-infos {
+.card-product-homepage-infos {
   display: flex;
   flex-direction: column;
   justify-content: center;
