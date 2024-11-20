@@ -17,7 +17,7 @@ class ArtsController < ApplicationController
     if @art.save
       redirect_to art_path(@art), notice: "Art piece was successfully created."
     else
-      # Rails.logger.debug { "Rental save failed: #{@art.errors.full_messages}" } 
+      # Rails.logger.debug { "Rental save failed: #{@art.errors.full_messages}" }
       # flash[:alert] = "Erreur : #{@art.errors.full_messages.join(', ')}"
       render :new, status: :unprocessable_entity
     end
