@@ -8,6 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 require "open-uri"
+Booking.destroy_all
 Art.destroy_all
 User.destroy_all
 

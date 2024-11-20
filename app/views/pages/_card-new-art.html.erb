@@ -10,7 +10,7 @@
                   <div class="inner-border">
 <div class="card-header">
   <%= link_to art_path(art) do %>
-    <%= cl_image_tag art.photo.key, width: 400, height: 300, crop: :fill, class: "card-header" %>
+    <%= cl_image_tag art.photo.key, width: 400, height: 300, gravity: :face, crop: :fill, class: "card-header" %>
   <% end %>
 </div>
 <div class="card-body">

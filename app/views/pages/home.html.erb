@@ -5,25 +5,21 @@
 
 <h2 class="paragraph-title">Top trending arts</h2>
 
-<p>All types of art pieces are available for rent on Art'BnB.</p>
-<p>Pick the one you love to pimp your living-room!</p>
+<p class="paragraph">All types of art pieces are available for rent on Art'BnB.
+</br>Pick the one you love to pimp your living-room!</p>
 
-
-<p>
-# Super images ici.
-</p>
 
 <%# Carousel Bootstrap %>
 
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://cdn.pariscityvision.com/library/image/5449.jpg" class="d-block w-100" alt="...">
+    <div class="carousel-item active carousel-picture">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Mural_del_Gernika.jpg/390px-Mural_del_Gernika.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item carousel-picture">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/390px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item carousel-picture">
       <img src="https://www.museumtv.art/wp-content/uploads/2021/05/E5EA565D-7ADE-43FF-B762-844F60CFAE23-1024x778.jpeg" class="d-block w-100" alt="...">
     </div>
   </div>
@@ -37,11 +33,50 @@
   </button>
 </div>
 
+<div class="container-cards-homepage">
+<div class="section">
+    <h2 class="paragraph-title">Bring a masterpiece home</h2>
+
+    <p class="paragraph">All types of art pieces are available for rent on Art'BnB.
+    </br>Pick the one you love to pimp your living-room!</p>
+
+    <div class="card-product">
+    <%= image_tag "salon-homepage.jpg" %>
+      <div class="card-product-infos">
+        <h2>Have guests tonight?</h2>
+        <p>Don't waste more time. <strong>Book'n'brag</strong>!</p>
+        <%= link_to "See arts for rent", arts_path, class: "btn btn-ghost" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="paragraph-title">Make money from your art</h2>
+
+    <p class="paragraph">All types of art pieces are available for rent on Art'BnB.
+    </br>Pick the one you love to pimp your living-room!</p>
+
+    <div class="card-product">
+      <%# <img src="../../assets/images/logo.png" /> %>
+    <%= image_tag "money-homepage.jpg" %>
+      <div class="card-product-infos">
+
+        <h2>Own a masterpiece?</h2>
+        <div>
+        <p>Don't waste more time. <strong>Earn money from it</strong>!</p>
+        </div>
+
+        <%= link_to "Register a new art", new_art_path, class: "btn btn-ghost"%>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <%# Buttons %>
 
-<%= link_to "See arts for rent", arts_path, class: "btn btn-ghost" %>
-<%= link_to "Register a new art", new_art_path, class: "btn btn-ghost" %>
+<%# <%= link_to "See arts for rent", arts_path, class: "btn btn-ghost" %>
+<%# <%= link_to "Register a new art", new_art_path, class: "btn btn-ghost" %>
 
 
 </div>
