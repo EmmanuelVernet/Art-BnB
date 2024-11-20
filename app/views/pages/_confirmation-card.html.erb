@@ -2,35 +2,21 @@
 <p>Thank you for booking <%= @art.title %>.</p>
 <p>Your request is currently pending. The owner will get back to you very soon.</p>
 
-displayed when form submitted
-    start and end dates
-    submission date
-    total price
-    text "waiting for owner validation"
-<div class="container my-5">
-  <div class="col-sm-8 offset-sm-2">
-    <h1 class="text-center mb-4">Show Booking</h1>
-    <div class="card shadow-lg border-0">
-      <div class="card-header bg-primary text-white text-center">
-        <h2 class="mb-0">Booking Details</h2>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title text-success">Artist: <%= @art.name %></h3>
-        <h4 class="card-subtitle mb-3 text-muted">Title: <%= @art.title %></h4>
-        <p class="card-text"><strong>Start date:</strong> <%= @booking.start_date.strftime('%d/%m/%Y') %></p>
-        <p class="card-text"><strong>End date:</strong> <%= @booking.end_date.strftime('%d/%m/%Y') %></p>
-        <p class="card-text"><strong>Category:</strong> <%= @art.category %></p>
-        <p class="card-text"><strong>Creation date:</strong> <%= @art.creation_date.strftime('%d/%m/%Y') %></p>
-        <p class="card-text"><strong>Renting price per day:</strong> <%= number_to_currency(@art.price) %></p>
-        <p class="card-text"><strong>Total price:</strong> <%= number_to_currency((@booking.end_date - @booking.start_date).round * @booking.art.price) %></p>
-        <div class="d-flex justify-content-center mt-4">
-          <%= link_to "Edit Booking", edit_art_booking_path, class: "btn btn-primary me-2" %>
-          <%= link_to "All Bookings", art_bookings_path, class: "btn btn-secondary" %>
-        </div>
-      </div>
-      <div class="card-footer text-muted text-center">
-        <small>Thank you for choosing our services!</small>
-      </div>
+<div class="card">
+  <div class="card-header">Booking Details</div>
+  <div class="card-body">
+    <h2>Start date: <%= @booking.start_date.strftime('%d/%m/%Y') %></h2>
+    <h2>End date: <%= @booking.end_date.strftime('%d/%m/%Y') %></h2>
+    <h3><strong class="paragraph-title">Artist: <%= @art.name %></strong></h3>
+    <p><strong>Category:</strong> <%= @art.category %></p>
+    <p><strong>Creation date:</strong> <%= @art.creation_date.strftime('%d/%m/%Y') %></p>
+    <p><strong>Renting price per day:</strong> <%= number_to_currency(@art.price) %></p>
+    <p><strong>Total price:</strong> <%= number_to_currency((@booking.end_date - @booking.start_date).round * @booking.art.price) %></p>
+    <div class="buttons">
+      <%= link_to "All Bookings", art_bookings_path, class: "btn-ghost" %>
     </div>
+  </div>
+  <div class="card-footer bg-white">
+    <strong>Booking status: </strong>Waiting for owner validation
   </div>
 </div>
