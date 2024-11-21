@@ -18,8 +18,7 @@
         <%= f.input :title, label: 'Art piece name' %>
         <%= f.input :category, hint: 'Abstract, modern...' %>
         <%= f.input :photo, as: :file %>
-        <%= f.input :creation_date, start_year: Date.today.year - 1500, end_year: Date.today.year,
-          label: 'Art creation date' %>
+        <%= f.input :creation_date, as: :date, label: 'Art creation date', start_year: 525, end_year: Date.today.year, max_years_allowed: 1500 %>
         <%= f.input :price, as: :integer, label: 'Renting price per day' %>
         <%= f.button :submit, class: "btn btn-primary w-100" %>
       <% end %>
