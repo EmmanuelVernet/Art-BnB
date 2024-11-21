@@ -1,14 +1,20 @@
-.paragraph-column {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 .paragraph {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   margin-bottom: 30px;
+  font-size: 24px;
+  text-align: center;
+  color: rgb(57, 57, 57);
+}
+.paragraph-column {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom:30px;
+  text-align: center;
+  font-size: 24px;
+  color: rgb(57, 57, 57);
 }
