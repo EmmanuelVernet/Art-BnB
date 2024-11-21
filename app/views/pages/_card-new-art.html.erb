@@ -14,7 +14,7 @@
                         <%= cl_image_tag art.photo.key, width: 400, height: 300, gravity: :face, crop: :fill, class: "card-header" %>
                       <% end %>
                     <% end %>
-                    <p class="card-text">Art name: <%= art.title %></p>
+                    <p class="card-text"><%= link_to art.title, art_path(art), class: "text-decoration-none" %></p>
                   </div>
                   <div class="card-body">
                     <p class="card-text">Artist name: <%= art.name %></p>
