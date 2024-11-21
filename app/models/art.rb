@@ -8,6 +8,7 @@ class Art < ApplicationRecord
   validates :name, presence: true
   validates :creation_date, presence: true
   validates :price, presence: true
+  validates :photo, presence: true
 
 
   include PgSearch::Model
