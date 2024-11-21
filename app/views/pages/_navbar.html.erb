@@ -1,34 +1,38 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%# <a class="navbar-brand" href="#"> %>
-      <%= image_tag "logo.png", class: "logo-navbar", style: "height: 40px; border-radius: 4px;" %>
-      <%# <img src="../../app/assets/images/logo.png" alt="Logo" style="height: 40px;" /> %>
+    <%= image_tag "logo.png", class: "logo-navbar", style: "height: 40px; border-radius: 4px;" %>
 
-
-
+    <div class="d-flex ms-auto me-auto w-50">
+      <%= form_with url: arts_path, method: :get, class: "d-flex w-100 custom-search" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control w-100",
+              placeholder: "Type your art search"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-secondary ms-0" %>
+      <% end %>
+    </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Gallery", arts_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "profile-picture.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown", bs_haspopup: true, bs_expanded: false }, alt: "Profile picture" %>
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Gallery", arts_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item dropdown">
+          <%= image_tag "profile-picture.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown", bs_haspopup: true, bs_expanded: false }, alt: "Profile picture" %>
 
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign up</a>
-              <a class="dropdown-item" href="<%= new_user_session_path %>">Log in</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="<%= destroy_user_session_path %>">Log out</a>
-            </div>
-          </li>
-          <!--li class="nav-item"-->
-          <!--/li-->
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign up</a>
+            <a class="dropdown-item" href="<%= new_user_session_path %>">Log in</a>
+            <a class="dropdown-item" data-turbo-method="delete" href="<%= destroy_user_session_path %>">Log out</a>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
