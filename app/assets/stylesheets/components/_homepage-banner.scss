@@ -39,16 +39,31 @@
   margin-bottom: 48px;
 }
 
-.banner p {
+.text-overlay p {
   font-size: 28px;
   color: white;
-  opacity: .7;
+  // opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  margin-left: 62px;
+  // margin-left: 20px;
   margin-top: 0;
   margin-bottom: 0;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+.text-overlay {
+  z-index: 1;
+  position: absolute;
+  // top: 0; /* L'overlay commence exactement au niveau du texte */
+  // left: 0; /* L'overlay commence exactement à gauche du texte */
+  // width: 100%; /* L'overlay prend la largeur du texte */
+  // height: 100%;
+  margin-left: 62px;
+  background-color: rgba(211, 211, 211, 0.55);
+  padding: 10px 20px;
+  border-radius: 5px;
 }
