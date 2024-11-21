@@ -1,0 +1,16 @@
+
+    <div class="card-product "> <!-- Flexbox for card layout -->
+      <div class="position-relative">
+        <% if art.photo.key %>
+           <%= cl_image_tag art.photo.key, class: "position-absolute" %>
+           <% end %>
+      </div>
+      <div class="card-product-infos d-flex flex-column justify-content-center align-items-center text-center"> <!-- Flexbox for centering content -->
+        <h3 class="card-title paragraph-title">Art piece: <%= art.title %></h3>
+        <p><strong>Category:</strong> <%= art.category %></p>
+        <p><strong>Creation date:</strong> <%= art.creation_date %></p>
+        <p><strong>Booking price per day:</strong> <%= art.price %></p>
+
+      </div>
+    </div>
+</div>
