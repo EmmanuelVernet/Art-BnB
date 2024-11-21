@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.art = @art
     @booking.user = current_user
+    @booking.status = :pending # default status at booking creation
     @booking.save
     redirect_to art_booking_path(@booking.art_id, @booking)
   end
@@ -35,7 +36,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :status)
   end
 
   def set_booking

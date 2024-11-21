@@ -1,4 +1,5 @@
 class ArtsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   def index
     if params[:query].present?
       @arts = Art.search_by_all_attributes(params[:query])
