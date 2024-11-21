@@ -1,24 +1,32 @@
 <div class="container">
   <div class="row mb-4">
      <div class="col-md-12 d-flex">
+
       <div class="card-trip image col-md-4 m-md-4">
         <% if @art.photo.key %>
          <%= cl_image_tag @art.photo.key, width: 400, height: 300 %>
          <% end %>
-        </div>
+      </div>
         <div class="card-trip fit-content col-md-6">
+
   <div class="card-trip-infos border-5">
+
     <div>
       <h2> <%= @art.title %></p></h2>
-      <%# <br> %>
+      <br>
       <p class="card-text"> <i class="fa-solid fa-palette"></i> <strong>Artist name :</strong> <%= @art.name %></p>
       <p class="card-text"> <i class="fa-solid fa-layer-group"></i> <strong>Category :</strong> <%= @art.category %></p>
       <p class="card-text"> <i class="fa-solid fa-calendar-days"></i> <strong>Creation date : </strong> <%= @art.creation_date.strftime('%d/%m/%Y') %></p>
       <p class="card-text"> <i class="fa-solid fa-money-check-dollar"></i> <strong>Renting price per day : </strong> <%= number_to_currency(@art.price) %></p>
-      </div>
-       <div class="mt-auto text-center">
-         <%= link_to "🚀 Book Now", new_art_booking_path(@art), class: "btn btn-outline-secondary w-100"%>
-       </div>
+    </div>
+    <br>
+    <div data-controller="toggle" class="mt-auto text-center align-self-center">
+        <button data-action="click->toggle#fire" class="btn btn-outline-secondary mb-5">🚀 Book Now</button>
+        <div data-toggle-target="togglableElement" class="<%= 'd-none' unless @form_visible %>">
+         <%= render "arts/formbooking", art: @art %>
+         </div>
+    </div>
+
   </div>
 </div>
 </div>

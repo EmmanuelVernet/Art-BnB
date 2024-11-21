@@ -19,8 +19,12 @@ class BookingsController < ApplicationController
     @booking.art = @art
     @booking.user = current_user
     @booking.status = :pending # default status at booking creation
-    @booking.save
-    redirect_to art_booking_path(@booking.art_id, @booking)
+    if @booking.save
+      redirect_to art_booking_path(@booking.art_id, @booking)
+    else
+      @form_visible = true
+      render 'arts/show', status: :unprocessable_entity
+    end
   end
 
   def edit
