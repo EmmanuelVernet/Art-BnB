@@ -17,13 +17,12 @@
         <%= f.input :name, label: 'Artist name' %>
         <%= f.input :title, label: 'Art piece name' %>
         <%= f.input :category, hint: 'Abstract, modern...' %>
-        <%= f.input :creation_date, label: 'Art creation date' %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :creation_date, start_year: Date.today.year - 1500, end_year: Date.today.year,
+          label: 'Art creation date' %>
         <%= f.input :price, as: :integer, label: 'Renting price per day' %>
         <%= f.button :submit, class: "btn btn-primary w-100" %>
       <% end %>
-    </div>
-    <div class="text-center">
-        <%= link_to "All arts list", arts_path %>
     </div>
   </div>
 </div>

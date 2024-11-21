@@ -8,4 +8,14 @@ class Art < ApplicationRecord
   validates :name, presence: true
   validates :creation_date, presence: true
   validates :price, presence: true
+  validates :photo, presence: true
+
+
+  include PgSearch::Model
+  pg_search_scope :search_by_all_attributes,
+    against: [ :title, :category, :name, :creation_date ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
+
 end
