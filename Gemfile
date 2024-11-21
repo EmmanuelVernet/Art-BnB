@@ -4,6 +4,9 @@ ruby "3.3.5"
 
 gem "cloudinary"
 
+# Search
+gem "pg_search"
+
 # Warnings
 gem "ostruct"
 
@@ -59,6 +62,7 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 
 group :development, :test do
+
   gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
