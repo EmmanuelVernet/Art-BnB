@@ -14,13 +14,44 @@
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active carousel-picture">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Mural_del_Gernika.jpg/390px-Mural_del_Gernika.jpg" class="d-block w-100" alt="...">
+    <%= link_to art_path(Art.find(4)) do %>
+      <%= image_tag Art.find(4).photo, class: "d-block w-100", alt: "..." %>
+      <% end %>
+      <p style="text-align: center;">
+        <%= link_to "<strong><i>#{Art.find(4).title}</strong></i> <br>is available!".html_safe, art_path(Art.find(4)), class: "paragraph-carousel" %>
+      </p>
     </div>
     <div class="carousel-item carousel-picture">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/390px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" class="d-block w-100" alt="...">
+      <%= link_to art_path(Art.find(2)) do %>
+      <%= image_tag Art.find(2).photo, class: "d-block w-100", alt: "..." %>
+      <% end %>
+      <p style="text-align: center;">
+        <%= link_to "<strong><i>#{Art.find(2).title}</strong></i> <br>is available!".html_safe, art_path(Art.find(2)), class: "paragraph-carousel" %>
+      </p>
     </div>
     <div class="carousel-item carousel-picture">
-      <img src="https://www.museumtv.art/wp-content/uploads/2021/05/E5EA565D-7ADE-43FF-B762-844F60CFAE23-1024x778.jpeg" class="d-block w-100" alt="...">
+      <%= link_to art_path(Art.find(8)) do %>
+      <%= image_tag Art.find(8).photo, class: "d-block w-100", alt: "..." %>
+      <% end %>
+      <p style="text-align: center;">
+        <%= link_to "<strong><i>#{Art.find(8).title}</strong></i> <br>is available!".html_safe, art_path(Art.find(8)), class: "paragraph-carousel" %>
+      </p>
+    </div>
+    <div class="carousel-item carousel-picture">
+      <%= link_to art_path(Art.find(9)) do %>
+      <%= image_tag Art.find(9).photo, class: "d-block w-100", alt: "..." %>
+      <% end %>
+      <p style="text-align: center;">
+        <%= link_to "<strong><i>#{Art.find(9).title}</strong></i> <br>is available!".html_safe, art_path(Art.find(9)), class: "paragraph-carousel" %>
+      </p>
+    </div>
+    <div class="carousel-item carousel-picture">
+      <%= link_to art_path(Art.find(1)) do %>
+      <%= image_tag Art.find(1).photo, class: "d-block w-100", alt: "..." %>
+      <% end %>
+      <p style="text-align: center;">
+        <%= link_to "<strong><i>#{Art.find(1).title}</strong></i> <br>is available!".html_safe, art_path(Art.find(1)), class: "paragraph-carousel" %>
+      </p>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
