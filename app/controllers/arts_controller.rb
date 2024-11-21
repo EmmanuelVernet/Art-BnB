@@ -10,6 +10,7 @@ class ArtsController < ApplicationController
 
   def show
     @art = Art.find(params[:id])
+    @booking = Booking.new
   end
 
   def new

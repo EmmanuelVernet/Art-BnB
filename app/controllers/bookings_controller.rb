@@ -22,7 +22,8 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to art_booking_path(@booking.art_id, @booking)
     else
-      render :new, status: :unprocessable_entity
+      @form_visible = true
+      render 'arts/show', status: :unprocessable_entity
     end
   end
 
