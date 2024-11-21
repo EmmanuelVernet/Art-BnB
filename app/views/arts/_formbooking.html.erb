@@ -13,11 +13,12 @@
         <div class=".datepicker()">
         <%= f.input :start_date,
                   as: :string,
-                  input_html: { data: { controller: "datepicker" } }
+                  input_html: { data: { 
+                    controller: "datepicker" ,
+                    datepicker_value: @art.price
+                      } 
+                    }
                   %>
-        <%= f.input :end_date,
-                  as: :string,
-                  input_html: { data: { controller: "datepicker" } } %>
 
 
         </div>
