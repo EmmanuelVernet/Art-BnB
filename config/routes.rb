@@ -14,5 +14,4 @@ Rails.application.routes.draw do
     resources :bookings
   end
   get 'dashboard', to: 'pages#dashboard'
-
 end
