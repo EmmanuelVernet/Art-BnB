@@ -1,7 +1,8 @@
-// html, body {
-//   height: 100%;
-//   margin: 0; /* Remove default margin */
-// }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; /* Remove default margin */
+}
 
 // /* The container takes the full height of the page */
 // // .container-layout {
@@ -21,4 +22,5 @@
 
 .main-content {
   flex-grow: 1;
+  background-color: white;
 }
