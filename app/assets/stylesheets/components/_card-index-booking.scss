@@ -1,6 +1,15 @@
+.container-card-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
 .card-product {
   overflow: hidden;
   height: 200px; /* Increased height to accommodate the image and centered content */
+  width: 830px;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -21,7 +30,7 @@
   flex-direction: column;
   justify-content: center; /* Vertically center content */
   align-items: flex-start; /* Align content to the start of the flex container */
-  padding: 20px; /* Adjust padding for better spacing */
+  padding: 40px; /* Adjust padding for better spacing */
   text-align: left; /* Ensure left alignment of text */
 }
 
@@ -39,5 +48,5 @@
 }
 
 .card-actions {
-  margin-top: 10px; /* Add space above the action buttons */
+  margin: 40px; /* Add space above the action buttons */
 }

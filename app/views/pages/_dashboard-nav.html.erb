@@ -1,17 +1,19 @@
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="booked-tab" data-bs-toggle="tab" data-bs-target="#booked" type="button" role="tab" aria-controls="booked" aria-selected="true">
-      Booked
+    <button class="nav-link active  bs-nav-tabs-border-width: bg-body-secondary" id="booked-tab" data-bs-toggle="tab" data-bs-target="#booked" type="button" role="tab" aria-controls="booked" aria-selected="true">
+      Validated bookings
     </button>
   </li>
+
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="arts-to-book-tab" data-bs-toggle="tab" data-bs-target="#arts-to-book" type="button" role="tab" aria-controls="arts-to-book" aria-selected="false">
-      My arts to book
-    </button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pending-bookings-tab" data-bs-toggle="tab" data-bs-target="#pending-bookings" type="button" role="tab" aria-controls="pending-bookings" aria-selected="false">
+    <button class="nav-link bs-nav-tabs-border-width: bg-body-secondary " id="pending-bookings-tab" data-bs-toggle="tab" data-bs-target="#pending-bookings" type="button" role="tab" aria-controls="pending-bookings" aria-selected="false">
       Pending bookings
+    </button>
+  </li>
+
+   <li class="nav-item" role="presentation">
+    <button class="nav-link" id="declined-bookings-tab" data-bs-toggle="tab" data-bs-target="#declined-bookings" type="button" role="tab" aria-controls="declined-bookings" aria-selected="false">
+      Declined-bookings
     </button>
   </li>
 </ul>
@@ -19,21 +21,27 @@
 <div class="tab-content" id="myTabContent">
   <!-- Booked Tab Pane -->
   <div class="tab-pane fade show active" id="booked" role="tabpanel" aria-labelledby="booked-tab">
-    <%= render "pages/card-index-booking" %>
+     <% @booking_validated.each do |art| %>
+        <%= render "pages/card-art-to-book", art: art %>
+      <% end %>
   </div>
 
-  <!-- My Arts to Book Tab Pane -->
-  <div class="tab-pane fade" id="arts-to-book" role="tabpanel" aria-labelledby="arts-to-book-tab">
+  <!--Pending Bookings Tab Pane -->
+  <div class="tab-pane fade" id="pending-bookings" role="tabpanel" aria-labelledby="pending-bookings-tab">
     <div class="container-md m-2 p-3">
-      <% @arts.each do |art| %>
+      <% @booking_pending.each do |art| %>
         <%= render "pages/card-art-to-book", art: art %>
       <% end %>
     </div>
   </div>
 
   <!-- Pending Bookings Tab Pane -->
-  <div class="tab-pane fade" id="pending-bookings" role="tabpanel" aria-labelledby="pending-bookings-tab">
-    <p>Content for pending bookings...</p>
-  </div>
-</div>
 
+
+  <div class="tab-pane fade show active" id="declined-bookings" role="tabpanel" aria-labelledby="declined-bookings-tab">
+     <% @booking_declined.each do |art| %>
+        <%= render "pages/card-art-to-book", art: art %>
+      <% end %>
+  </div>
+
+</div>
