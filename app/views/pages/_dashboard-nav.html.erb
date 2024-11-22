@@ -1,7 +1,7 @@
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active  bs-nav-tabs-border-width: bg-body-secondary" id="booked-tab" data-bs-toggle="tab" data-bs-target="#booked" type="button" role="tab" aria-controls="booked" aria-selected="true">
-      Booked
+      Validated bookings
     </button>
   </li>
 
@@ -10,9 +10,10 @@
       Pending bookings
     </button>
   </li>
+
    <li class="nav-item" role="presentation">
-    <button class="nav-link" id="booked-validator-tab" data-bs-toggle="tab" data-bs-target="#booked-validator" type="button" role="tab" aria-controls="booked-validator" aria-selected="false">
-      booked-validator
+    <button class="nav-link" id="declined-bookings-tab" data-bs-toggle="tab" data-bs-target="#declined-bookings" type="button" role="tab" aria-controls="declined-bookings" aria-selected="false">
+      Declined-bookings
     </button>
   </li>
 </ul>
@@ -20,25 +21,27 @@
 <div class="tab-content" id="myTabContent">
   <!-- Booked Tab Pane -->
   <div class="tab-pane fade show active" id="booked" role="tabpanel" aria-labelledby="booked-tab">
-    <%= render "pages/card-index-booking" %>
+     <% @booking_validated.each do |art| %>
+        <%= render "pages/card-art-to-book", art: art %>
+      <% end %>
   </div>
 
-  <!-- My Arts to Book Tab Pane -->
-  <div class="tab-pane fade" id="arts-to-book" role="tabpanel" aria-labelledby="arts-to-book-tab">
+  <!--Pending Bookings Tab Pane -->
+  <div class="tab-pane fade" id="pending-bookings" role="tabpanel" aria-labelledby="pending-bookings-tab">
     <div class="container-md m-2 p-3">
-      <% @arts_pending.each do |art| %>
+      <% @booking_pending.each do |art| %>
         <%= render "pages/card-art-to-book", art: art %>
       <% end %>
     </div>
   </div>
 
   <!-- Pending Bookings Tab Pane -->
-  <div class="tab-pane fade" id="pending-bookings" role="tabpanel" aria-labelledby="pending-bookings-tab">
-    <p>Content for pending bookings...</p>
-  </div>
 
-  <div class="tab-pane fade show active" id="booked-validator" role="tabpanel" aria-labelledby="booked-validator-tab">
-    <p>to code the logic oh the owner that must validate or no the bookings </p>
+
+  <div class="tab-pane fade show active" id="declined-bookings" role="tabpanel" aria-labelledby="declined-bookings-tab">
+     <% @booking_declined.each do |art| %>
+        <%= render "pages/card-art-to-book", art: art %>
+      <% end %>
   </div>
 
 </div>
