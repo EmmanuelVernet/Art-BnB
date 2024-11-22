@@ -17,7 +17,12 @@ Rails.application.routes.draw do
         patch :decline
       end
     end
-
   end
   get 'dashboard', to: 'pages#dashboard'
+  # resources :bookings, only: [] do
+  #   member do
+  #     patch :accept
+  #     patch :decline
+  #   end
+  # end
 end

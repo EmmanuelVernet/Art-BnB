@@ -15,7 +15,7 @@
 
         <div class="card-actions d-flex flex-column justify-content-start align-self-center">
         <%= link_to "Validate", accept_art_booking_path(art, booking), data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-secondary mb-3" %>
-        <%= link_to "Decline", decline_art_booking_path(art, booking), method: :patch, class: "btn btn-outline-secondary" %>
+        <%= link_to "Decline", decline_art_booking_path(art, booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-secondary" %>
 
         </div>
 
