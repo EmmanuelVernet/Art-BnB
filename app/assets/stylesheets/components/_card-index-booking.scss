@@ -50,3 +50,15 @@
 .card-actions {
   margin: 40px; /* Add space above the action buttons */
 }
+
+.card-product-details {
+  overflow: hidden;
+  height: 200px; /* Increased height to accommodate the image and centered content */
+  width: 830px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row; /* Ensure horizontal alignment of image and content */
+  margin-bottom: 30px;
+  border: 2px solid #DE9B72;
+}

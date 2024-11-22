@@ -1,10 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
+    <!-- Conteneur pour le logo à gauche -->
     <%= image_tag "logo.png", class: "logo-navbar", style: "height: 40px; border-radius: 4px;" %>
 
     <!-- Conteneur centré pour la barre de recherche -->
-    <div class="d-flex justify-content-center w-100">
-      <%= form_with url: arts_path, method: :get, class: "d-flex w-50 custom-search" do %>
+    <div class="d-flex justify-content-center w-50 mx-auto">
+      <%= form_with url: arts_path, method: :get, class: "d-flex w-100 custom-search" do %>
         <%= text_field_tag :query,
               params[:query],
               class: "form-control",
@@ -14,6 +15,7 @@
       <% end %>
     </div>
 
+    <!-- Conteneur des liens de navigation -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
@@ -27,5 +29,11 @@
         </li>
       </ul>
     </div>
+
+    <!-- Logo de profil tout à droite -->
+    <div class="d-flex ms-auto">
+      <%= image_tag "profile-picture.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown", bs_haspopup: true, bs_expanded: false }, alt: "Profile picture" %>
+    </div>
+
   </div>
 </div>
