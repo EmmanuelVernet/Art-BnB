@@ -1,7 +1,9 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_art
-  before_action :set_booking, only: [:show, :edit, :update] # find by ID only on these actions
+  before_action :set_booking, only: [:show, :edit, :update, :accept, :decline ] # find by ID only on these actions
+
+
   def index
     @bookings = @art.bookings
   end
@@ -39,6 +41,16 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
     redirect_to art_path(@art)
+  end
+
+  def accept
+    @booking.update(status: "accepted")
+    redirect_to dashboard_path, notice: "Booking accepted."
+  end
+
+  def decline
+    @booking.update(status: "declined")
+    redirect_to dashboard_path, alert: "Booking declined."
   end
 
   private

@@ -22,7 +22,7 @@
   <!-- Booked Tab Pane -->
   <div class="tab-pane fade show active" id="booked" role="tabpanel" aria-labelledby="booked-tab">
      <% @booking_validated.each do |art| %>
-        <%= render "pages/card-art-to-book", art: art %>
+        <%= render "pages/card-index-booking", art: art %>
       <% end %>
   </div>
 
@@ -30,7 +30,7 @@
   <div class="tab-pane fade" id="pending-bookings" role="tabpanel" aria-labelledby="pending-bookings-tab">
     <div class="container-md m-2 p-3">
       <% @booking_pending.each do |art| %>
-        <%= render "pages/card-art-to-book", art: art %>
+        <%= render "pages/card-index-booking", art: art %>
       <% end %>
     </div>
   </div>
@@ -40,7 +40,7 @@
 
   <div class="tab-pane fade show active" id="declined-bookings" role="tabpanel" aria-labelledby="declined-bookings-tab">
      <% @booking_declined.each do |art| %>
-        <%= render "pages/card-art-to-book", art: art %>
+        <%= render "pages/card-index-booking", art: art %>
       <% end %>
   </div>
 

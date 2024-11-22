@@ -12,7 +12,8 @@ class PagesController < ApplicationController
     @booking_pending = Art.joins(:bookings).where(bookings: { status: "pending", user_id: current_user.id }).distinct
     @booking_validated = Art.joins(:bookings).where(bookings: { status: "accepted", user_id: current_user.id }).distinct
     @booking_declined = Art.joins(:bookings).where(bookings: { status: "declined", user_id: current_user.id }).distinct
-
+    @arts = Art.where(user: current_user)
+    @my_booking_pending = Booking.where(status: "pending", art_id: @arts.pluck(:id))
+    @my_booking_validated = Booking.where(status: "accepted", art_id: @arts.pluck(:id))
   end
-
 end

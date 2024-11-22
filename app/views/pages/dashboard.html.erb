@@ -9,6 +9,6 @@
 
 <p class="paragraph">My Art-Pieces</p>
 
-<%= render "pages/dashboard-nav-myarts" %>
+<%= render partial: "pages/dashboard-nav-myarts", locals: { arts: @arts, my_booking_pending: @my_booking_pending } %>
 
 </div>
