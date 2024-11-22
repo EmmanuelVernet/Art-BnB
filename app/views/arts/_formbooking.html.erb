@@ -12,13 +12,14 @@
       <%= simple_form_for([@art, @booking]) do |f| %>
         <div class=".datepicker()">
         <%= f.input :start_date,
-                  as: :string,
-                  input_html: { data: { 
-                    controller: "datepicker" ,
-                    datepicker_value: @art.price
-                      } 
-                    }
-                  %>
+                    label: "Booking dates",
+                    as: :string,
+                    input_html: { data: { 
+                      controller: "datepicker" ,
+                      datepicker_value: @art.price
+                        } 
+                      }
+                    %>
 
 
         </div>
