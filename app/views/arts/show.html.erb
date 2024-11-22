@@ -1,12 +1,15 @@
-<div class="d-flex flex-column align-items-center">
+<%# <div class="d-flex flex-column align-items-center"> %>
+
+<div class="text-overlay-index">
 
   <h1 class="paragraph-title">Book "<%= @art.title %>"!</h1>
 
   <p class="paragraph">Fancy <strong><em><%= @art.title %> </em></strong> ?</p>
-  <p class="paragraph">Bring <%= @art.name %>'s masterpiece home tonight!
-  </br>Nothing's more simple.</p>
+  <p class="paragraph">Bring <%= @art.name %>'s masterpiece home tonight!</p>
 
+  </div>
 
+<%# <div class="background-2"> %>
   <%= render "pages/card-show-art" %>
-
-</div>
+<%# </div> %>
+<%# </div> %>
