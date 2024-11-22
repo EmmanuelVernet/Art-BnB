@@ -15,5 +15,6 @@ class PagesController < ApplicationController
     @arts = Art.where(user: current_user)
     @my_booking_pending = Booking.where(status: "pending", art_id: @arts.pluck(:id))
     @my_booking_validated = Booking.where(status: "accepted", art_id: @arts.pluck(:id))
+    @my_booking_declined = Booking.where(status: "declined", art_id: @arts.pluck(:id))
   end
 end
