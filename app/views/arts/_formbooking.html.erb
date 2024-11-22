@@ -1,6 +1,6 @@
 
 
-<h1>Book <%= @art.title %></h1>
+<h2 class="paragraph-title">Book <%= @art.title %></h2>
 
 <%# form (simple_form): #invisible form activated with button (JS)
   calendar with:
@@ -14,10 +14,10 @@
         <%= f.input :start_date,
                     label: "Booking dates",
                     as: :string,
-                    input_html: { data: { 
+                    input_html: { data: {
                       controller: "datepicker" ,
                       datepicker_value: @art.price
-                        } 
+                        }
                       }
                     %>
 
@@ -29,4 +29,3 @@
 
 
       <% end %>
-

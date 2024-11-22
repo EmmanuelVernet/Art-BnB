@@ -7,13 +7,19 @@
 
   <li class="nav-item" role="presentation">
     <button class="nav-link $nav-link-color: bg-success bs-nav-tabs-border-width: bg-body-secondary" id="my_booking_pending-tab" data-bs-toggle="tab" data-bs-target="#my_booking_pending" type="button" role="tab" aria-controls="@my_booking_pending" aria-selected="false">
-      Pending booking to validate
+      Booking to validate
     </button>
   </li>
 
   <li class="nav-item" role="presentation">
     <button class="nav-link $nav-link-color: bg-success bs-nav-tabs-border-width: bg-body-secondary" id="my_booking_validated-tab" data-bs-toggle="tab" data-bs-target="#my_booking_validated" type="button" role="tab" aria-controls="@my_booking_validated" aria-selected="false">
-     Validate
+     Validated
+    </button>
+  </li>
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link $nav-link-color: bg-success bs-nav-tabs-border-width: bg-body-secondary" id="my_booking_declined-tab" data-bs-toggle="tab" data-bs-target="#my_booking_declined" type="button" role="tab" aria-controls="@my_booking_declined" aria-selected="false">
+     Declined
     </button>
   </li>
 
@@ -37,7 +43,7 @@
     <!--Pending Bookings Tab Pane -->
   <div class="tab-pane fade" id="my_booking_pending" role="tabpanel" aria-labelledby="my_booking_pending-tab">
     <div class="container-md m-2 p-3">
-      <% my_booking_pending.each do |booking| %>
+      <% @my_booking_pending.each do |booking| %>
         <%= render partial: "pages/card-art-pending", locals: { booking: booking, art: booking.art } %>
       <% end %>
     </div>
@@ -45,8 +51,21 @@
 
    <div class="tab-pane fade" id="my_booking_validated" role="tabpanel" aria-labelledby="my_booking_validated-tab">
     <div class="container-md m-2 p-3">
-       <% if @my_booking_declined.present? && @my_booking_declined.any? %>
+  <% if @my_booking_validated.present? && @my_booking_validated.any? %>
       <% @my_booking_validated.each do |booking| %>
+        <%= render partial: "pages/card-art-pending", locals: { booking: booking, art: booking.art } %>
+      <% end %>
+       <% else %>
+      <p>No declined bookings to display.</p>
+    <% end %>
+    </div>
+  </div>
+
+ <div class="tab-pane fade" id="my_booking_declined" role="tabpanel" aria-labelledby="my_booking_declined-tab">
+  <div class="container-md m-2 p-3">
+     <% if @my_booking_declined.present? && @my_booking_declined.any? %>
+      <% @my_booking_declined.each do |booking| %>
+
         <%= render partial: "pages/card-art-pending", locals: { booking: booking, art: booking.art } %>
       <% end %>
        <% else %>

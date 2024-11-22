@@ -10,7 +10,7 @@
         <div class="card-trip fit-content col-md-6" <% @art.photo.attached? ? style="position: absolute;" : "" %>>
       <div class="card-trip-infos border-5">
         <div>
-          <h2> <%= @art.title %></p></h2>
+          <h2> <%= @art.title %></h2>
           <br>
           <p class="card-text"> <i class="fa-solid fa-palette"></i> <strong>Artist name :</strong> <%= @art.name %></p>
           <p class="card-text"> <i class="fa-solid fa-layer-group"></i> <strong>Category :</strong> <%= @art.category %></p>
@@ -23,7 +23,7 @@
             <div data-toggle-target="togglableElement" class="<%= 'd-none' unless @form_visible %>">
             <%= render "arts/formbooking", art: @art %>
               <div>
-                <p class="card-text"> <i class="fa-solid fa-money-check-dollar" id="dynamic-price"></i></p> 
+                <p class="card-text"> <i class="fa-solid fa-money-check-dollar" id="dynamic-price"></i></p>
                 </div>
                 </div>
               </div>
