@@ -4,19 +4,43 @@
       My arts to book
     </button>
   </li>
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link $nav-link-color: bg-success bs-nav-tabs-border-width: bg-body-secondary" id="my_booking_pending-tab" data-bs-toggle="tab" data-bs-target="#my_booking_pending" type="button" role="tab" aria-controls="@my_booking_pending" aria-selected="false">
+      Pending booking to validate
+    </button>
+  </li>
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link $nav-link-color: bg-success bs-nav-tabs-border-width: bg-body-secondary" id="my_booking_validated-tab" data-bs-toggle="tab" data-bs-target="#my_booking_validated" type="button" role="tab" aria-controls="@my_booking_validated" aria-selected="false">
+     Validate
+    </button>
+  </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
-  <!-- Booked Tab Pane -->
-  <div class="tab-pane fade show active" id="booked" role="tabpanel" aria-labelledby="booked-tab">
-    <%= render "pages/card-index-booking" %>
+<!-- My Arts to Book Tab Pane -->
+    <div class="tab-pane fade active show" id="arts-to-book" role="tabpanel" aria-labelledby="arts-to-book-tab">
+    <div class="container-md m-2 p-3">
+      <% arts.each do |art| %>
+        <%= render partial: "pages/card-index-booking", locals: { art: art } %>
+      <% end %>
+    </div>
   </div>
 
-  <!-- My Arts to Book Tab Pane -->
-    <div class="tab-pane fade" id="arts-to-book" role="tabpanel" aria-labelledby="arts-to-book-tab">
+    <!--Pending Bookings Tab Pane -->
+  <div class="tab-pane fade" id="my_booking_pending" role="tabpanel" aria-labelledby="my_booking_pending-tab">
     <div class="container-md m-2 p-3">
-      <% @booking_validated.each do |art| %>
-        <%= render "pages/card-art-to-book", art: art %>
+      <% my_booking_pending.each do |booking| %>
+        <%= render partial: "pages/card-art-pending", locals: { booking: booking, art: booking.art } %>
+      <% end %>
+    </div>
+  </div>
+
+   <div class="tab-pane fade" id="my_booking_validated" role="tabpanel" aria-labelledby="my_booking_validated-tab">
+    <div class="container-md m-2 p-3">
+      <% my_booking_validated.each do |booking| %>
+        <%= render partial: "pages/card-art-pending", locals: { booking: booking, art: booking.art } %>
       <% end %>
     </div>
   </div>
