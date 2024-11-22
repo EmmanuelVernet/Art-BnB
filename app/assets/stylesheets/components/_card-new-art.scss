@@ -1,6 +1,7 @@
 /* General Styling */
 body {
   background-color: #f4f4f2; /* Neutral background to contrast the wooden frame */
+  // background-color:#f4f4f200;
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -9,6 +10,29 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.hover-effect {
+}
+
+.hover-effect:hover {
+border-color: #DE9B72;
+background-color: black;
+}
+
+.title-text {
+  color: rgb(57, 57, 57);
+  font-family: "Quicksand", sans-serif;
+  margin-top: 4px;
+}
+
+.title-text:hover {
+  // color: rgb(0, 0, 0);
+}
+
+.title-margin {
+  margin-bottom: 4px;
+  margin-top: 8px;
 }
 
 .outer-border {
@@ -20,6 +44,11 @@ background-color: black;
   margin: 0 auto;
 }
 
+.outer-border:hover {
+  border: 4px solid #dec072;
+  background-color: rgba(80, 80, 80, 0.968);
+}
+
 
 .mid-border {
   border: 4px solid #DE9B72;
@@ -29,13 +58,25 @@ background-color: black;
   margin: auto;
 }
 
+.mid-border:hover {
+  border: 4px solid #dec072;
+  // opacity: 0.8;
+}
+
 .inner-border {
 position: relative;
 border: 2px solid #DE9B72;
-  height: 100%;
-  width: 100%;
-  margin: auto;
+height: 100%;
+width: 100%;
+margin: auto;
+background-color: #ffffff;
 }
+
+.inner-border:hover {
+  border: 2px solid#dec072;
+  background-color: #dfdfdf;
+
+  }
 
 /* Container */
 .container {
@@ -67,7 +108,7 @@ img {
 
   /* Card Header */
   .card-header {
-    background-color: #ffffff; /* Light header background */
+    // background-color: #ffffff; /* Light header background */
     font-weight: bold;
     font-size: 1.25rem;
     text-align: center;
@@ -80,7 +121,7 @@ img {
 
   /* Card Body */
   .card-body {
-    background-color: #ffffff;
+    // background-color: #ffffff;
     padding: 1rem;
 
 
@@ -89,13 +130,15 @@ img {
       font-weight: bold;
       text-align: center;
       margin-bottom: 1rem;
-      color: #333; /* Dark text for contrast */
+      color:  rgb(57, 57, 57);; /* Dark text for contrast */
+      font-weight: bold;
     }
 
     .card-text {
       font-size: 1rem;
-      color: #555;
+      color:  rgb(57, 57, 57);;
       margin-bottom: 0.5rem;
+      font-family: "Quicksand", sans-serif;
     }
   }
 

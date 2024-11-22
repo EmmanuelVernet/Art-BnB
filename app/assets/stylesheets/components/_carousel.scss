@@ -11,13 +11,51 @@ margin-bottom: 30px;
 background: white;
 box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 background-size: cover;
+margin-left: 200px;
+margin-right: 200px;
 background-position: center;
-padding: 50px 0;
+padding-top: 30px;
+padding-bottom: 0px;
 display: flex;
 justify-content: center;
+border: solid, rgb(39, 39, 39), 2px;
+border-radius: 2px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #4A4A4A; /* Couleur des flèches */
+}
+
+.btn-ghost-carousel {
+  color: rgb(39, 39, 39);
+  border: 1px solid rgb(39, 39, 39);
+  padding: 8px 24px;
+  border-radius: 50px;
+  // font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn-ghost-carousel:hover {
+  opacity: 1;
+}
+
+.paragraph-carousel {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-top: 30px;
+  font-size: 18px;
+  color: rgb(57, 57, 57);
+  text-decoration: none;
+  opacity: 1;
+}
+
+.paragraph-carousel:hover {
+  opacity: 0.7;
+  text-decoration: underline;
 }

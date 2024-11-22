@@ -8,10 +8,24 @@
   transition: opacity 0.3s ease;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(14, 14, 14);
 }
 
 .btn-ghost:hover {
   opacity: 1;
+}
+
+.btn-carousel {
+  color: #9b2c2c;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(14, 14, 14);
 }

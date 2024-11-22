@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   gap: 30px; /* Espacement entre les colonnes */
-  margin-top: 20px;
-  margin-bottom: 40px; /* Espacement entre les containers */
+  padding-top: 20px;
+  padding-bottom: 20px; /* Espacement entre les containers */
 }
 
 .section {
@@ -17,6 +17,7 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
+  border-radius: 2px;
 }
 
 .card-product-homepage img {
