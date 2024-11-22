@@ -8,9 +8,7 @@
          <% end %>
         </div>
         <div class="card-trip fit-content col-md-6" <% @art.photo.attached? ? style="position: absolute;" : "" %>>
-
       <div class="card-trip-infos border-5">
-
         <div>
           <h2> <%= @art.title %></p></h2>
           <br>
@@ -21,16 +19,19 @@
         </div>
         <br>
         <div data-controller="toggle" class="mt-auto text-center align-self-center">
-            <button data-action="click->toggle#fire" class="btn btn-outline-secondary mb-3">🚀 Book Now</button>
+            <button data-action="click->toggle#fire" class="btn btn-outline-secondary mb-5">🚀 Book Now</button>
             <div data-toggle-target="togglableElement" class="<%= 'd-none' unless @form_visible %>">
             <%= render "arts/formbooking", art: @art %>
-            </div>
+              <div>
+                <p class="card-text"> <i class="fa-solid fa-money-check-dollar" id="dynamic-price"></i></p> 
+                </div>
+                </div>
+              </div>
+          </div>
         </div>
-
-      </div>
-</div>
-</div>
-</div>
+    </div>
+  </div>
+     <%# </div> %>
 
 
 

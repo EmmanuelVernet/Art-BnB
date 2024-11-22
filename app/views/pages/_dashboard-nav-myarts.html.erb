@@ -1,0 +1,24 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item" role="presentation">
+    <button class="nav-link active $nav-link-color: bg-success bs-nav-tabs-border-width: bg-body-secondary" id="arts-to-book-tab" data-bs-toggle="tab" data-bs-target="#arts-to-book" type="button" role="tab" aria-controls="arts-to-book" aria-selected="true">
+      My arts to book
+    </button>
+  </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  <!-- Booked Tab Pane -->
+  <div class="tab-pane fade show active" id="booked" role="tabpanel" aria-labelledby="booked-tab">
+    <%= render "pages/card-index-booking" %>
+  </div>
+
+  <!-- My Arts to Book Tab Pane -->
+    <div class="tab-pane fade" id="arts-to-book" role="tabpanel" aria-labelledby="arts-to-book-tab">
+    <div class="container-md m-2 p-3">
+      <% @booking_validated.each do |art| %>
+        <%= render "pages/card-art-to-book", art: art %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

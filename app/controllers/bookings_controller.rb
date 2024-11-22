@@ -15,7 +15,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    # raise
+    selected_dates = params[:booking][:start_date].split("to")
+    start_date = selected_dates[0]
+    end_date = selected_dates[1]
+    @booking = Booking.new(start_date: start_date, end_date: end_date)
     @booking.art = @art
     @booking.user = current_user
     @booking.status = :pending # default status at booking creation
