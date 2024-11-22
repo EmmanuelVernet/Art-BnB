@@ -1,39 +1,31 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <!-- Conteneur pour le logo à gauche -->
-    <%= image_tag "logo.png", class: "logo-navbar", style: "height: 40px; border-radius: 4px;" %>
-
-    <!-- Conteneur centré pour la barre de recherche -->
-    <div class="d-flex justify-content-center w-50 mx-auto">
-      <%= form_with url: arts_path, method: :get, class: "d-flex w-100 custom-search" do %>
-        <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Type your art search"
-          %>
-        <%= submit_tag "Search", name: "", class: "btn btn-secondary ms-0" %>
-      <% end %>
-    </div>
-
-    <!-- Conteneur des liens de navigation -->
+    <img class="logo-navbar" style="height: 40px; border-radius: 4px;" src="/assets/logo-840b563e9646baa3c6e5af83c55f3ebec4f05d06ec0425c9c395d1a3c5d17f79.png">
+    <div class="d-flex ms-auto me-auto w-50">
+      <form class="d-flex w-100 custom-search" action="/arts" accept-charset="UTF-8" method="get" data-dashlane-rid="bc0b773e9ec93a31">
+        <input type="text" name="query" id="query" class="form-control w-100" placeholder="Type your art search" data-dashlane-rid="6556b9238eb00112">
+        <input type="submit" name="" value="Search" class="btn btn-secondary ms-0" data-disable-with="Search" data-dashlane-rid="b93e4c51b3942aeb">
+</form>    </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link" %>
+          <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item active">
-          <%= link_to "Gallery", arts_path, class: "nav-link" %>
+          <a class="nav-link" href="/arts">Gallery</a>
         </li>
         <li class="nav-item">
-          <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+          <a class="nav-link" href="/dashboard">Dashboard</a>
+        </li>
+         <li class="nav-item">
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" data-bs-haspopup="true" data-bs-expanded="false" alt="Profile picture" src="/assets/profile-picture-67292d3595a8f583b2394b25344b2952183aff63908969586bf4959e5152be4c.png" aria-expanded="false">
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/users/sign_up">Sign up</a>
+            <a class="dropdown-item" href="/users/sign_in">Log in</a>
+            <a class="dropdown-item" data-turbo-method="delete" href="/users/sign_out">Log out</a>
+          </div>
         </li>
       </ul>
     </div>
-
-    <!-- Logo de profil tout à droite -->
-    <div class="d-flex ms-auto">
-      <%= image_tag "profile-picture.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown", bs_haspopup: true, bs_expanded: false }, alt: "Profile picture" %>
-    </div>
-
   </div>
 </div>
