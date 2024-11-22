@@ -5,8 +5,14 @@ class PagesController < ApplicationController
 
   def dashboard
     @bookings = current_user.bookings
-    @arts = Art.where(user_id: current_user.id)
-    @arts_pending = Art.joins(:bookings).where(bookings: { status: 0, user_id: current_user.id }).distinct
+    # @arts = Art.joins(:bookings)
+    # .where(user_id: current_user.id)
+    # .where(bookings: { status: "accepted", user_id: current_user.id })
+    # .distinct
+    @booking_pending = Art.joins(:bookings).where(bookings: { status: "pending", user_id: current_user.id }).distinct
+    @booking_validated = Art.joins(:bookings).where(bookings: { status: "accepted", user_id: current_user.id }).distinct
+    @booking_declined = Art.joins(:bookings).where(bookings: { status: "declined", user_id: current_user.id }).distinct
+
   end
 
 end

@@ -136,4 +136,6 @@ file10 = URI.open("https://img.over-blog.com/478x500/2/89/06/71/Art-moderne/Pica
 demoiselles.photo.attach(io: file10, filename: "demoiselles.jpg", content_type: "image/jpeg")
 demoiselles.save!
 
+booking_one = Booking.create!(start_date:"24/11/2024", )
+
 puts "Finished! Created #{Art.count} arts."
